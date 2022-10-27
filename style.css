@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: blueviolet;
+    box-sizing: border-box;
+    color: rgb(27, 22, 22);
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+
+}
+:root{
+    --rotate-sec: 0deg;
+    --rotate-min: 0deg;
+    --rotate-hour: 0deg;
+    --bg-clr: linear-gradient(to bottom, red, yellow);
+}
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+.watch-box {
+    width: 400px;
+    height: 400px;
+    background-image: var(--bg-clr);
+    background-color: rgba(250, 235, 215, 0.616);
+    border-radius: 50%;
+    position: relative;
+    font-size: 1.5rem;
+}
+.inner-box{
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    border-radius: 50%;
+    /* border: 2px solid black; */
+    z-index: 1;
+    background-color: rgb(235, 200, 252);
+    /* background-image: var(--bg-clr); */
+}
+
+.number {
+    --rotate: 0deg;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    rotate: var(--rotate);
+}
+
+#c1 {
+    --rotate: 30deg;
+}
+
+#c2 {
+    --rotate: 60deg;
+}
+
+#c3 {
+    --rotate: 90deg;
+}
+
+#c4 {
+    --rotate: 120deg;
+}
+
+#c5 {
+    --rotate: 150deg;
+}
+
+#c6 {
+    --rotate: 180deg;
+}
+
+#c7 {
+    --rotate: 210deg;
+}
+
+#c8 {
+    --rotate: 240deg;
+}
+
+#c9 {
+    --rotate: 270deg;
+}
+
+#c10 {
+    --rotate: 300deg;
+}
+
+#c11 {
+    --rotate: 330deg;
+}
+
+.stick {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translateX(-50%);
+    transform-origin: 0% 100%;
+}
+
+.min {
+    rotate: var(--rotate-min);
+    width: 7px;
+    height: 40%;
+    background-color: rgb(8, 11, 192);
+    border-radius: 5px;
+}
+
+.border-radius{
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+.hour {
+    rotate: var(--rotate-hour);
+    /* rotate:180deg; */
+    width: 10px;
+    height: 35%;
+    background-color: black;
+}
+.second {
+    rotate: var(--rotate-sec);
+    width: 3px;
+    height: 45%;
+    background-color: red;
+}
+.box{
+    position: absolute;
+    left : 50%;
+    top : 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    background-image:var(--bg-clr);
+    transform: translate(-50%, -50%);
+}
+
